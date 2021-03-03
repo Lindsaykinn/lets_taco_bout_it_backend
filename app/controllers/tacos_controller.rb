@@ -3,45 +3,46 @@ class TacosController < ApplicationController
 
   # GET /tacos
   def index
-    @tacos = Taco.all
+    #instance variables are not needed bc it is not being rendered through erb views
+    tacos = Taco.all
 
-    render json: @tacos
+    render json: TacoSerializer.new(tacos)
   end
 
   # GET /tacos/1
   def show
-    render json: @taco
+    render json: taco
   end
 
   # POST /tacos
   def create
-    @taco = Taco.new(taco_params)
+    taco = Taco.new(taco_params)
 
-    if @taco.save
-      render json: @taco, status: :created, location: @taco
+    if taco.save
+      render json: taco, status: :created, location: taco
     else
-      render json: @taco.errors, status: :unprocessable_entity
+      render json: taco.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /tacos/1
   def update
-    if @taco.update(taco_params)
-      render json: @taco
+    if taco.update(taco_params)
+      render json: taco
     else
-      render json: @taco.errors, status: :unprocessable_entity
+      render json: taco.errors, status: :unprocessable_entity
     end
   end
 
   # DELETE /tacos/1
   def destroy
-    @taco.destroy
+    taco.destroy
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_taco
-      @taco = Taco.find(params[:id])
+      taco = Taco.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
