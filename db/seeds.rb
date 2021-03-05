@@ -24,7 +24,7 @@ Taco.create([
     description: "Bulgogi (Korean) marinated steak*
     topped with shiitake mushrooms, lettuce, soy sesame
     vinaigrette and sesame seeds",
-    rating: 5,
+    likes: 0,
     image: "",
     restaurant_id: 1
   },
@@ -32,19 +32,19 @@ Taco.create([
     description: "Grilled chili crusted
     Mahi topped with lettuce, pico de gallo and hoisin
     lime aioli ",
-    rating: 3,
+    likes: 2,
     image: "",
     restaurant_id: 1
   },
   {name: "tuna tatako",
     description: "ancho-crusted tuna, asian slaw, thai basil vinaigrette, soy glaze, lettuce shell (served chilled). topped with: toasted sesame seeds",
-    rating: 4,
+    likes: 1,
     image: "",
     restaurant_id: 2
   },
   {name: "Nashville hot tofu",
     description: "crispy tofu, napa slaw, ranch crema, house brined pickles, flour tortilla",
-    rating: 5,
+    likes: 10,
     image: "",
     restaurant_id: 3
   }

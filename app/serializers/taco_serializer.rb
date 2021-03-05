@@ -1,4 +1,4 @@
 class TacoSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :name, :description, :rating, :image, :restaurant_id, :restaurant
+  attributes :name, :description, :likes, :image, :restaurant_id, :restaurant
 end

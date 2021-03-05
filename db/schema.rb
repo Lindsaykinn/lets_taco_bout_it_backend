@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 2021_03_02_231755) do
   create_table "tacos", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "rating"
+    t.integer "likes", default: 0
     t.string "image"
-    t.integer "restaurant_id"
+    t.integer "restaurant_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["restaurant_id"], name: "index_tacos_on_restaurant_id"

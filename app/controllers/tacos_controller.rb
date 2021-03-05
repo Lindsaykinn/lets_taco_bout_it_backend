@@ -47,6 +47,6 @@ class TacosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def taco_params
-      params.require(:taco).permit(:name, :description, :rating, :image, :restaurant_id)
+      params.require(:taco).permit(:name, :description, :likes, :image, :restaurant_id)
     end
 end
